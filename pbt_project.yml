@@ -54,7 +54,33 @@ datasets:
         author: varadharajan@gmail.com
         createdAt: '2024-09-09 09:11:53'
 templates: {}
-jobs: {}
+jobs:
+  jobs/job_for_dev:
+    name: job_for_dev
+    description: ''
+    fabricUID: 17185
+    scheduler:
+      MWAA: {}
+    cloudProvider: null
+    jobSize: null
+    scheduleCron: None
+    timeout: null
+    alerting:
+      emails: ''
+      onStart: false
+      onSuccess: false
+      onFailure: false
+    pipelines:
+    - pipelines/pipeline1
+    jobClusterMode:
+      clusterMode:
+        Single: {}
+      clusterId: null
+    enabled: null
+    createdAt: '2024-09-09 09:16:03'
+    author: varadharajan@gmail.com
+    models: []
+    sqlProjects: []
 gemContainer:
   languageVersion: '3.10'
   gemLibsVersion: 1.3.4.0
