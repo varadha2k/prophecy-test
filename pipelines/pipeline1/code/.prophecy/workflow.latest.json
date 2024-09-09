@@ -1,0 +1,419 @@
+{
+  "metainfo" : {
+    "migrationVersions" : {
+      "gemBuilderVersion" : "v1"
+    },
+    "functions" : { },
+    "codeGenConfiguration" : {
+      "editableConfig" : true,
+      "plibVersion" : {
+        "mavenVersion" : "8.0.31",
+        "pyPiVersion" : "1.9.9"
+      }
+    },
+    "id" : "1",
+    "uri" : "pipelines/pipeline1",
+    "pipelineSettingsInfo" : {
+      "applicationName" : "pipeline1",
+      "hasApplication" : true,
+      "isFunctionsPackageDirDefined" : true
+    },
+    "language" : "python",
+    "fabricId" : "16995",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ],
+      "functionPackageName" : "varadharajangmailcomteam.bhtest.functions",
+      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions" ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "12654",
+      "projectName" : "ProphecySparkBasicsPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12655",
+      "projectName" : "ProphecyWarehousePython",
+      "externalDependencies" : [ ]
+    } ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "pipeline1",
+    "configurationVersion" : "v2"
+  },
+  "connections" : [ {
+    "id" : "6mznVhDj9_zE506z0B6xo",
+    "source" : "fk-Vp9dqYleMQLqY2IKqM$$VQmU0NOJ54bqbXy6v5SFl",
+    "sourcePort" : "pzXf4sOZp_RVnpDLign8O$$QA4ASgL52ZERD5_7qJqEu",
+    "target" : "6s3plDp7O-B4I33mbNNw7$$SuX-RnFEC6RtzkP6lMSNC",
+    "targetPort" : "g7LW4KauaMxU_Srd5ICPM$$NPEd-bmF6fF862tbcT1At"
+  }, {
+    "id" : "KJYYYlvkUTbYZpfYnmB-m",
+    "source" : "6s3plDp7O-B4I33mbNNw7$$SuX-RnFEC6RtzkP6lMSNC",
+    "sourcePort" : "shRzw5ww-9cBlJv5s-1Iu$$DEDUTN170kHz0FMW4K7Uk",
+    "target" : "AOUfcIJ_OApLs5AqO3PR1$$uE_osGwetGD9DOzCJBS3G",
+    "targetPort" : "1V0yoNVtErMcr80MWYaqL$$tW39VBODr4hW-3VY02GnH"
+  } ],
+  "processes" : {
+    "fk-Vp9dqYleMQLqY2IKqM$$VQmU0NOJ54bqbXy6v5SFl" : {
+      "id" : "fk-Vp9dqYleMQLqY2IKqM$$VQmU0NOJ54bqbXy6v5SFl",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "testdata1",
+        "slug" : "testdata1",
+        "x" : -1040,
+        "y" : -420,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Loads student data from a CSV file for analysis and reporting purposes.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "pzXf4sOZp_RVnpDLign8O$$QA4ASgL52ZERD5_7qJqEu",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/testdata1"
+      }
+    },
+    "6s3plDp7O-B4I33mbNNw7$$SuX-RnFEC6RtzkP6lMSNC" : {
+      "id" : "6s3plDp7O-B4I33mbNNw7$$SuX-RnFEC6RtzkP6lMSNC",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "filter_by_c3_value",
+        "slug" : "filter_by_c3_value",
+        "x" : -640,
+        "y" : -460,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Extracts records where a specific criterion is met, enhancing data relevance for further analysis.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "g7LW4KauaMxU_Srd5ICPM$$NPEd-bmF6fF862tbcT1At",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "MALLA REDDY INSTITTUTE OF MANAGEMENT",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Title indicating the educational institution and the specific academic program for which the marks are recorded.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c1",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The header for the first column, which represents the serial number of the students in the internal marks report.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c2",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The unique identifier for the student, typically representing their roll number or admission number.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c3",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Name of the student enrolled in the MBA program.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c4",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Marks obtained in the Subject 'AFM' (Advanced Financial Management) by the student.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c5",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Marks obtained in the subject 'MM' (Mathematics for Management) by the student.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c6",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Marks obtained in the SFM (Statistical Financial Management) subject by the student.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c7",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Score obtained in the 'EM' subject for the student.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c8",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The score received by the student in the ITAM subject during the first semester internal examination.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c9",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Marks obtained in the FMS subject by the student.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c10",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Placeholder for a student's marks in a specific subject, currently not utilized in the dataset.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c11",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Placeholder for additional data; currently contains no relevant information.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "shRzw5ww-9cBlJv5s-1Iu$$DEDUTN170kHz0FMW4K7Uk",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ "g7LW4KauaMxU_Srd5ICPM$$NPEd-bmF6fF862tbcT1At##_c3" ],
+        "condition" : {
+          "format" : "sql",
+          "expression" : "_c3 = '14'"
+        }
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.28&projectSubscriptionProjectId=12654&path=gems/Filter",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "AOUfcIJ_OApLs5AqO3PR1$$uE_osGwetGD9DOzCJBS3G" : {
+      "id" : "AOUfcIJ_OApLs5AqO3PR1$$uE_osGwetGD9DOzCJBS3G",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "testdata_parquet",
+        "slug" : "testdata_parquet",
+        "x" : -120,
+        "y" : -400,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "1V0yoNVtErMcr80MWYaqL$$tW39VBODr4hW-3VY02GnH",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "MALLA REDDY INSTITTUTE OF MANAGEMENT",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Title indicating the educational institution and the specific academic program for which the marks are recorded.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c1",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The header for the first column, which represents the serial number of the students in the internal marks report.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c2",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The unique identifier for the student, typically representing their roll number or admission number.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c3",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Name of the student enrolled in the MBA program.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c4",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Marks obtained in the Subject 'AFM' (Advanced Financial Management) by the student.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c5",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Marks obtained in the subject 'MM' (Mathematics for Management) by the student.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c6",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Marks obtained in the SFM (Statistical Financial Management) subject by the student.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c7",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Score obtained in the 'EM' subject for the student.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c8",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The score received by the student in the ITAM subject during the first semester internal examination.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c9",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Marks obtained in the FMS subject by the student.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c10",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Placeholder for a student's marks in a specific subject, currently not utilized in the dataset.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c11",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Placeholder for additional data; currently contains no relevant information.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/testdata_parquet"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  }
+}

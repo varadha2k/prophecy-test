@@ -1,0 +1,112 @@
+name: BH-TEST
+description: ''
+version: 0.0.1
+author: varadharajan@gmail.com
+language: python
+buildSystem: ''
+buildSystemDetails:
+  artefactID: bhtest
+  parentArtefactID: varadharajangmailcomteam
+  buildSystem: wheel
+  author: null
+  createdAt: '2024-09-09 08:51:20'
+pipelines:
+  pipelines/pipeline1:
+    name: pipeline1
+    description: ''
+    author: varadharajan@gmail.com
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2024-09-09 08:51:20'
+    datasets:
+      inputs:
+      - datasets/testdata1
+      outputs:
+      - datasets/testdata_parquet
+    subgraphs: []
+    dependencies: {}
+datasets:
+  datasets/testdata1:
+    name: testdata1
+    description: ''
+    author: varadharajan@gmail.com
+    createdAt: '2024-09-09 09:07:59'
+    mode: batch
+    physicalDatasets:
+      BH-DEMO:
+        fabricId: 16995
+        datasetType: File
+        description: ''
+        author: varadharajan@gmail.com
+        createdAt: '2024-09-09 09:08:00'
+  datasets/testdata_parquet:
+    name: testdata_parquet
+    description: ''
+    author: varadharajan@gmail.com
+    createdAt: '2024-09-09 09:11:53'
+    mode: batch
+    physicalDatasets:
+      BH-DEMO:
+        fabricId: 16995
+        datasetType: File
+        description: ''
+        author: varadharajan@gmail.com
+        createdAt: '2024-09-09 09:11:53'
+templates: {}
+jobs: {}
+gemContainer:
+  languageVersion: '3.10'
+  gemLibsVersion: 1.3.4.0
+  gems: {}
+  dependencies: null
+functions:
+  author: null
+  createdAt: '2024-09-09 08:51:20'
+  udfs: {}
+  udafs: {}
+  expressions: {}
+  airflowFunctions: {}
+  businessRules: {}
+subgraphs: {}
+sqlModels: {}
+sqlSnapshots: {}
+sqlTests: {}
+sqlMacros: {}
+sqlSeeds: {}
+sqlSources: {}
+sqlUnreferencedSources: {}
+sqlPipeline: null
+dependencies:
+- modifiedAt: '2024-09-09T08:51:20.593909Z'
+  name: plibMaven
+  version: 8.0.31
+  id: '338088294'
+  createdAt: '2024-09-09T08:51:20.593909Z'
+  type: plibMaven
+- modifiedAt: '2024-09-09T08:51:20.593909Z'
+  name: plibPypi
+  version: 1.9.9
+  id: '1187563106'
+  createdAt: '2024-09-09T08:51:20.593909Z'
+  type: plibPypi
+projectDependencies:
+  '12654':
+    projectUID: 12654
+    projectName: ProphecySparkBasicsPython
+    repositoryPath: gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=
+    version: 0.2.28
+    isDefault: true
+    author: null
+    createdAt: '2024-09-09 08:50:33'
+  '12655':
+    projectUID: 12655
+    projectName: ProphecyWarehousePython
+    repositoryPath: gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12655.git&subPath=
+    version: 0.0.8
+    isDefault: true
+    author: null
+    createdAt: '2024-09-09 08:50:33'
+flags:
+  shouldAddDefaultDependenciesIfAbsent: true
+pipelineConfigurations: {}
