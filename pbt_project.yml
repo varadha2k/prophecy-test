@@ -95,6 +95,32 @@ jobs:
     author: varadharajan@gmail.com
     models: []
     sqlProjects: []
+  jobs/pipeline2_job:
+    name: pipeline2_job
+    description: ''
+    fabricUID: 17185
+    scheduler:
+      MWAA: {}
+    cloudProvider: null
+    jobSize: null
+    scheduleCron: None
+    timeout: null
+    alerting:
+      emails: ''
+      onStart: false
+      onSuccess: false
+      onFailure: false
+    pipelines:
+    - pipelines/Pipeline2
+    jobClusterMode:
+      clusterMode:
+        Single: {}
+      clusterId: null
+    enabled: null
+    createdAt: '2024-09-11 04:34:53'
+    author: varadharajan@gmail.com
+    models: []
+    sqlProjects: []
 gemContainer:
   languageVersion: '3.10'
   gemLibsVersion: 1.3.4.0
