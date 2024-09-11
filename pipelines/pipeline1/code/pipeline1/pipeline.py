@@ -13,6 +13,7 @@ def pipeline(spark: SparkSession) -> None:
     df_SchemaTransform_1 = SchemaTransform_1(spark)
     df_filter_by_c3_value = filter_by_c3_value(spark, df_testdata1)
     testdata_parquet(spark, df_filter_by_c3_value)
+    df_Join_1 = Join_1(spark)
 
 def main():
     spark = SparkSession.builder\

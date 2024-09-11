@@ -1,4 +1,5 @@
 from .Deduplicate_1 import Deduplicate_1
+from .Join_1 import Join_1
 from .testdata1 import testdata1
 from .SchemaTransform_1 import SchemaTransform_1
 from .filter_by_c3_value import filter_by_c3_value

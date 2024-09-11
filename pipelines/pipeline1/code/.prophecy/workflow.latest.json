@@ -420,6 +420,68 @@
         "projectName" : "ProphecySparkBasicsPython"
       }
     },
+    "tjUfg0iQ7uQWMsRGQl9xJ$$JZgGj0LnqHE8SnRjwxh2b" : {
+      "id" : "tjUfg0iQ7uQWMsRGQl9xJ$$JZgGj0LnqHE8SnRjwxh2b",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "Join_1",
+        "slug" : "Join_1",
+        "x" : -220,
+        "y" : -880,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "pxh_eG9rnhyZcSyb83OGS$$KagM4e9bea2uFJXH9yiLu",
+          "slug" : "in0"
+        }, {
+          "id" : "I8VD6Koy9LEV_6smB9vTw$$07obdeW5ZUhsf217Z7YFZ",
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "iOUkEi43or0Wv2X3nCjcl$$LJrd9wiNp-HFvc9CwcMI1",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "format" : "sql",
+            "expression" : ""
+          },
+          "joinType" : "inner"
+        } ],
+        "expressions" : [ ],
+        "hints" : [ {
+          "id" : "pxh_eG9rnhyZcSyb83OGS$$KagM4e9bea2uFJXH9yiLu",
+          "alias" : "in0",
+          "hintType" : "none",
+          "propagateColumns" : false
+        }, {
+          "id" : "I8VD6Koy9LEV_6smB9vTw$$07obdeW5ZUhsf217Z7YFZ",
+          "alias" : "in1",
+          "hintType" : "none",
+          "propagateColumns" : false
+        } ],
+        "allIn1" : null,
+        "activeTab" : "conditions",
+        "columnsSelector" : [ ],
+        "allIn0" : null,
+        "whereClause" : null,
+        "headAlias" : "in0"
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.28&projectSubscriptionProjectId=12654&path=gems/Join",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
     "6s3plDp7O-B4I33mbNNw7$$SuX-RnFEC6RtzkP6lMSNC" : {
       "id" : "6s3plDp7O-B4I33mbNNw7$$SuX-RnFEC6RtzkP6lMSNC",
       "component" : "Filter",
@@ -691,6 +753,54 @@
     },
     "severity" : 1,
     "message" : "Please connect input port in0",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.tjUfg0iQ7uQWMsRGQl9xJ$$JZgGj0LnqHE8SnRjwxh2b.ports.inputs[0]",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Please connect input port in0",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.tjUfg0iQ7uQWMsRGQl9xJ$$JZgGj0LnqHE8SnRjwxh2b.ports.inputs[1]",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Please connect input port in1",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.tjUfg0iQ7uQWMsRGQl9xJ$$JZgGj0LnqHE8SnRjwxh2b.properties.conditions[0].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Expression cannot be empty. [Conditions]",
     "tags" : [ ],
     "relatedInformation" : [ ]
   } ]
