@@ -12,14 +12,15 @@
       }
     },
     "id" : "1",
-    "uri" : "pipelines/pipeline1",
+    "uri" : "pipelines/Pipeline2",
+    "sourceSuggestions" : [ ],
     "pipelineSettingsInfo" : {
-      "applicationName" : "pipeline1",
+      "applicationName" : "Pipeline2",
       "hasApplication" : true,
       "isFunctionsPackageDirDefined" : true
     },
     "language" : "python",
-    "fabricId" : "16995",
+    "fabricId" : "13854",
     "frontEndLanguage" : "sql",
     "mode" : "batch",
     "udfs" : {
@@ -35,27 +36,7 @@
     "configuration" : {
       "common" : {
         "type" : "record",
-        "fields" : [ {
-          "name" : "test",
-          "kind" : {
-            "type" : "string",
-            "value" : null
-          },
-          "optional" : false,
-          "comment" : "10",
-          "isWorkflowNodeConfiguration" : false,
-          "isReferenced" : false
-        }, {
-          "name" : "test2",
-          "kind" : {
-            "type" : "string",
-            "value" : null
-          },
-          "optional" : false,
-          "comment" : "20",
-          "isWorkflowNodeConfiguration" : false,
-          "isReferenced" : false
-        } ]
+        "fields" : [ ]
       },
       "oldCommon" : {
         "type" : "record",
@@ -89,37 +70,31 @@
       "enabled" : false,
       "value" : 1000
     },
-    "topLevelPackage" : "pipeline1",
+    "topLevelPackage" : "pipeline2",
     "configurationVersion" : "v2"
   },
   "connections" : [ {
-    "id" : "6mznVhDj9_zE506z0B6xo",
-    "source" : "fk-Vp9dqYleMQLqY2IKqM$$VQmU0NOJ54bqbXy6v5SFl",
-    "sourcePort" : "pzXf4sOZp_RVnpDLign8O$$QA4ASgL52ZERD5_7qJqEu",
-    "target" : "6s3plDp7O-B4I33mbNNw7$$SuX-RnFEC6RtzkP6lMSNC",
-    "targetPort" : "g7LW4KauaMxU_Srd5ICPM$$NPEd-bmF6fF862tbcT1At"
+    "id" : "4J-ULYaeOxYtUMpAeFGtd",
+    "source" : "6WEjsy1BH0MJWPrLhAe5R$$O3oHMXHz_VQ_pQI_TA5Y9",
+    "sourcePort" : "WEs9ZYZ-5zAy8v80zbRl-$$ylaUqOR1FsIcJwQyA2c4x",
+    "target" : "8al_7MdT35c_hbcYIIftT$$TAGBagrl4PrSYnV5XxFft",
+    "targetPort" : "zDRQaws8vDAwUJ4gkOmE9$$g3dZBCUyljh2I3lGAyUAj"
   }, {
-    "id" : "KJYYYlvkUTbYZpfYnmB-m",
-    "source" : "6s3plDp7O-B4I33mbNNw7$$SuX-RnFEC6RtzkP6lMSNC",
-    "sourcePort" : "shRzw5ww-9cBlJv5s-1Iu$$DEDUTN170kHz0FMW4K7Uk",
-    "target" : "AOUfcIJ_OApLs5AqO3PR1$$uE_osGwetGD9DOzCJBS3G",
-    "targetPort" : "1V0yoNVtErMcr80MWYaqL$$tW39VBODr4hW-3VY02GnH"
-  }, {
-    "id" : "BTDEpdNk_AkTyrUqWzcm2$$gfj21cwhbLgUJ-ZUVpNVn",
-    "source" : "Gn3mDUyq4_kLsu5jiI1nf$$tQAQOfwujksTIPKIosnUW",
-    "sourcePort" : "fyMfCFaZsnCgpuS4oUg_8$$2gJ7Ild-pJONVUiG_eezH",
-    "target" : "AsMULUq4ubAIhlVA6BGYe$$j_cJvDWZKmjvx9qcV4VQF",
-    "targetPort" : "rx6KoOfYVPq-LSJNoWrzA$$0vG63urLbodP7JO4n8GdQ"
+    "id" : "qBSRsnih7ksff8MKm3Qm_",
+    "source" : "8al_7MdT35c_hbcYIIftT$$TAGBagrl4PrSYnV5XxFft",
+    "sourcePort" : "CKyvZqDeBhbd-kY1YMtAr$$v-gyWLLpJXVzZNaYHNkSI",
+    "target" : "g7OEuMz00WXywK12utMbD$$43rg1yDVNgLM6SbrLwpvp",
+    "targetPort" : "Ews08UGXoQEOqUI6LPWOb$$RVP33vQwEQnhWLBzzVVS8"
   } ],
   "processes" : {
-    "fk-Vp9dqYleMQLqY2IKqM$$VQmU0NOJ54bqbXy6v5SFl" : {
-      "id" : "fk-Vp9dqYleMQLqY2IKqM$$VQmU0NOJ54bqbXy6v5SFl",
+    "6WEjsy1BH0MJWPrLhAe5R$$O3oHMXHz_VQ_pQI_TA5Y9" : {
+      "id" : "6WEjsy1BH0MJWPrLhAe5R$$O3oHMXHz_VQ_pQI_TA5Y9",
       "component" : "Source",
       "metadata" : {
         "label" : "testdata1",
         "slug" : "testdata1",
-        "x" : -1040,
-        "y" : -420,
+        "x" : -1540,
+        "y" : -700,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -130,7 +105,7 @@
       "ports" : {
         "inputs" : [ ],
         "outputs" : [ {
-          "id" : "pzXf4sOZp_RVnpDLign8O$$QA4ASgL52ZERD5_7qJqEu",
+          "id" : "WEs9ZYZ-5zAy8v80zbRl-$$ylaUqOR1FsIcJwQyA2c4x",
           "slug" : "out"
         } ],
         "selectedInputFields" : [ ],
@@ -141,14 +116,14 @@
         "datasetId" : "datasets/testdata1"
       }
     },
-    "AsMULUq4ubAIhlVA6BGYe$$j_cJvDWZKmjvx9qcV4VQF" : {
-      "id" : "AsMULUq4ubAIhlVA6BGYe$$j_cJvDWZKmjvx9qcV4VQF",
-      "component" : "Deduplicate",
+    "8al_7MdT35c_hbcYIIftT$$TAGBagrl4PrSYnV5XxFft" : {
+      "id" : "8al_7MdT35c_hbcYIIftT$$TAGBagrl4PrSYnV5XxFft",
+      "component" : "Filter",
       "metadata" : {
-        "label" : "Deduplicate_1",
-        "slug" : "Deduplicate_1",
-        "x" : -620,
-        "y" : -640,
+        "label" : "Filter_1",
+        "slug" : "Filter_1",
+        "x" : -1140,
+        "y" : -680,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -156,11 +131,124 @@
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "rx6KoOfYVPq-LSJNoWrzA$$0vG63urLbodP7JO4n8GdQ",
-          "slug" : "in0"
+          "id" : "zDRQaws8vDAwUJ4gkOmE9$$g3dZBCUyljh2I3lGAyUAj",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "MALLA REDDY INSTITTUTE OF MANAGEMENT",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Title indicating the educational institution and the specific academic program for which the marks are recorded.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c1",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The header for the first column, which represents the serial number of the students in the internal marks report.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c2",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The unique identifier for the student, typically representing their roll number or admission number.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c3",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Name of the student enrolled in the MBA program.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c4",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Marks obtained in the Subject 'AFM' (Advanced Financial Management) by the student.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c5",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Marks obtained in the subject 'MM' (Mathematics for Management) by the student.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c6",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Marks obtained in the SFM (Statistical Financial Management) subject by the student.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c7",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Score obtained in the 'EM' subject for the student.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c8",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The score received by the student in the ITAM subject during the first semester internal examination.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c9",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Marks obtained in the FMS subject by the student.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c10",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Placeholder for a student's marks in a specific subject, currently not utilized in the dataset.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c11",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Placeholder for additional data; currently contains no relevant information.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
         } ],
         "outputs" : [ {
-          "id" : "HGGnpF-mp2N6TVGhmZsO6$$t-0sCloGSoV0k4P54aeR5",
+          "id" : "CKyvZqDeBhbd-kY1YMtAr$$v-gyWLLpJXVzZNaYHNkSI",
           "slug" : "out"
         } ],
         "selectedInputFields" : [ ],
@@ -168,96 +256,35 @@
         "autoUpdateOnRun" : false
       },
       "properties" : {
-        "dedupColumns" : [ ],
-        "dedupType" : "any",
         "columnsSelector" : [ ],
-        "orders" : [ ],
-        "useOrderBy" : false
+        "condition" : {
+          "format" : "sql",
+          "expression" : "true"
+        }
       },
       "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.28&projectSubscriptionProjectId=12654&path=gems/Deduplicate",
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.28&projectSubscriptionProjectId=12654&path=gems/Filter",
         "projectName" : "ProphecySparkBasicsPython"
       }
     },
-    "E4IV9sox37IooBqSldpSN$$tnYsrAqZkoCtKyLpvZ6tJ" : {
-      "id" : "E4IV9sox37IooBqSldpSN$$tnYsrAqZkoCtKyLpvZ6tJ",
-      "component" : "Source",
-      "metadata" : {
-        "label" : "Source_1",
-        "slug" : "Source_1",
-        "x" : -1080,
-        "y" : -620,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ ],
-        "outputs" : [ {
-          "id" : "acEbAKzyObxSHyNeGvO1u$$RZS9UZ-XDNwOTUVpDKxuG",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      },
-      "properties" : { }
-    },
-    "A-aFswHu9yJP4guxq_W2B$$DsmyQK1OwoICqmtZ55UDi" : {
-      "id" : "A-aFswHu9yJP4guxq_W2B$$DsmyQK1OwoICqmtZ55UDi",
-      "component" : "SchemaTransform",
-      "metadata" : {
-        "label" : "SchemaTransform_1",
-        "slug" : "SchemaTransform_1",
-        "x" : -320,
-        "y" : -560,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "dN0BHOvfrYwnCC0aeo-r9$$sVb2V0Y0WGApzcikLpzYh",
-          "slug" : "in0"
-        } ],
-        "outputs" : [ {
-          "id" : "AmCl7ahUCTrjAfbbWkQhV$$Tt3aVrZoi74qfkEHGaOF_",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      },
-      "properties" : {
-        "importLanguage" : "sql",
-        "importString" : "",
-        "transformations" : [ ],
-        "activeTab" : "transformations",
-        "columnsSelector" : [ ]
-      },
-      "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.28&projectSubscriptionProjectId=12654&path=gems/SchemaTransform",
-        "projectName" : "ProphecySparkBasicsPython"
-      }
-    },
-    "AOUfcIJ_OApLs5AqO3PR1$$uE_osGwetGD9DOzCJBS3G" : {
-      "id" : "AOUfcIJ_OApLs5AqO3PR1$$uE_osGwetGD9DOzCJBS3G",
+    "g7OEuMz00WXywK12utMbD$$43rg1yDVNgLM6SbrLwpvp" : {
+      "id" : "g7OEuMz00WXywK12utMbD$$43rg1yDVNgLM6SbrLwpvp",
       "component" : "Target",
       "metadata" : {
         "label" : "testdata_parquet",
         "slug" : "testdata_parquet",
-        "x" : -120,
-        "y" : -400,
+        "x" : -720,
+        "y" : -600,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
-        "isImported" : false
+        "isImported" : false,
+        "comment" : "Saves test data in a structured format to a cloud storage location for future analysis or processing.",
+        "autoUpdateComment" : true
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "1V0yoNVtErMcr80MWYaqL$$tW39VBODr4hW-3VY02GnH",
+          "id" : "Ews08UGXoQEOqUI6LPWOb$$RVP33vQwEQnhWLBzzVVS8",
           "slug" : "in0",
           "schema" : {
             "type" : "struct",
@@ -381,197 +408,6 @@
       "properties" : {
         "datasetId" : "datasets/testdata_parquet"
       }
-    },
-    "Gn3mDUyq4_kLsu5jiI1nf$$tQAQOfwujksTIPKIosnUW" : {
-      "id" : "Gn3mDUyq4_kLsu5jiI1nf$$tQAQOfwujksTIPKIosnUW",
-      "component" : "Filter",
-      "metadata" : {
-        "label" : "name_filter",
-        "slug" : "name_filter",
-        "x" : -820,
-        "y" : -620,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "p5KpzQTX2Ak-KWgoeeVa8$$47XhmIXyobHAzXrr34YwA",
-          "slug" : "in0"
-        } ],
-        "outputs" : [ {
-          "id" : "fyMfCFaZsnCgpuS4oUg_8$$2gJ7Ild-pJONVUiG_eezH",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      },
-      "properties" : {
-        "columnsSelector" : [ ],
-        "condition" : {
-          "format" : "sql",
-          "expression" : "true"
-        }
-      },
-      "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.28&projectSubscriptionProjectId=12654&path=gems/Filter",
-        "projectName" : "ProphecySparkBasicsPython"
-      }
-    },
-    "6s3plDp7O-B4I33mbNNw7$$SuX-RnFEC6RtzkP6lMSNC" : {
-      "id" : "6s3plDp7O-B4I33mbNNw7$$SuX-RnFEC6RtzkP6lMSNC",
-      "component" : "Filter",
-      "metadata" : {
-        "label" : "filter_by_c3_value",
-        "slug" : "filter_by_c3_value",
-        "x" : -640,
-        "y" : -460,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false,
-        "comment" : "Extracts records where a specific criterion is met, enhancing data relevance for further analysis.",
-        "autoUpdateComment" : true
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "g7LW4KauaMxU_Srd5ICPM$$NPEd-bmF6fF862tbcT1At",
-          "slug" : "in0",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "MALLA REDDY INSTITTUTE OF MANAGEMENT",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Title indicating the educational institution and the specific academic program for which the marks are recorded.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "_c1",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "The header for the first column, which represents the serial number of the students in the internal marks report.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "_c2",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "The unique identifier for the student, typically representing their roll number or admission number.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "_c3",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Name of the student enrolled in the MBA program.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "_c4",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Marks obtained in the Subject 'AFM' (Advanced Financial Management) by the student.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "_c5",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Marks obtained in the subject 'MM' (Mathematics for Management) by the student.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "_c6",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Marks obtained in the SFM (Statistical Financial Management) subject by the student.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "_c7",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Score obtained in the 'EM' subject for the student.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "_c8",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "The score received by the student in the ITAM subject during the first semester internal examination.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "_c9",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Marks obtained in the FMS subject by the student.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "_c10",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Placeholder for a student's marks in a specific subject, currently not utilized in the dataset.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "_c11",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Placeholder for additional data; currently contains no relevant information.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        } ],
-        "outputs" : [ {
-          "id" : "shRzw5ww-9cBlJv5s-1Iu$$DEDUTN170kHz0FMW4K7Uk",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      },
-      "properties" : {
-        "columnsSelector" : [ "g7LW4KauaMxU_Srd5ICPM$$NPEd-bmF6fF862tbcT1At##_c3" ],
-        "condition" : {
-          "format" : "sql",
-          "expression" : "_c3 = '14'"
-        }
-      },
-      "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.28&projectSubscriptionProjectId=12654&path=gems/Filter",
-        "projectName" : "ProphecySparkBasicsPython"
-      }
     }
   },
   "ports" : {
@@ -580,118 +416,5 @@
     "selectedInputFields" : [ ],
     "isCustomOutputSchema" : false,
     "autoUpdateOnRun" : false
-  },
-  "diagnostics" : [ {
-    "property" : "$.workflow.metainfo.configuration.common.fields[0].kind.value",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 1,
-    "message" : "Default values error for key: `test` has empty string value",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  }, {
-    "property" : "$.workflow.metainfo.configuration.common.fields[1].kind.value",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 1,
-    "message" : "Default values error for key: `test2` has empty string value",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  }, {
-    "property" : "$.workflow.processes.Gn3mDUyq4_kLsu5jiI1nf$$tQAQOfwujksTIPKIosnUW.ports.inputs[0]",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 1,
-    "message" : "Please connect input port in0",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  }, {
-    "property" : "$.workflow.processes.AsMULUq4ubAIhlVA6BGYe$$j_cJvDWZKmjvx9qcV4VQF",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 2,
-    "message" : "One of the upstream gems is broken. Please, fix it first.",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  }, {
-    "property" : "$.workflow.processes.AsMULUq4ubAIhlVA6BGYe$$j_cJvDWZKmjvx9qcV4VQF.properties.dedupColumns",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 2,
-    "message" : "At least one rule has to be specified",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  }, {
-    "property" : "$.workflow.processes.E4IV9sox37IooBqSldpSN$$tnYsrAqZkoCtKyLpvZ6tJ.properties.datasetId",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 1,
-    "message" : "dataset id missing",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  }, {
-    "property" : "$.workflow.processes.A-aFswHu9yJP4guxq_W2B$$DsmyQK1OwoICqmtZ55UDi.ports.inputs[0]",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 1,
-    "message" : "Please connect input port in0",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  } ]
+  }
 }

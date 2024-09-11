@@ -26,6 +26,21 @@ pipelines:
       - datasets/testdata_parquet
     subgraphs: []
     dependencies: {}
+  pipelines/Pipeline2:
+    name: Pipeline2
+    description: this is test pipeline
+    author: varadharajan@gmail.com
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2024-09-11 04:27:23'
+    datasets:
+      inputs:
+      - datasets/testdata1
+      outputs:
+      - datasets/testdata_parquet
+    subgraphs: []
+    dependencies: {}
 datasets:
   datasets/testdata1:
     name: testdata1
@@ -70,8 +85,7 @@ jobs:
       onStart: false
       onSuccess: false
       onFailure: false
-    pipelines:
-    - pipelines/pipeline1
+    pipelines: []
     jobClusterMode:
       clusterMode:
         Single: {}

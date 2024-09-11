@@ -8,6 +8,9 @@ from pipeline1.graph import *
 
 def pipeline(spark: SparkSession) -> None:
     df_testdata1 = testdata1(spark)
+    df_name_filter = name_filter(spark)
+    df_Deduplicate_1 = Deduplicate_1(spark, df_name_filter)
+    df_SchemaTransform_1 = SchemaTransform_1(spark)
     df_filter_by_c3_value = filter_by_c3_value(spark, df_testdata1)
     testdata_parquet(spark, df_filter_by_c3_value)
 
