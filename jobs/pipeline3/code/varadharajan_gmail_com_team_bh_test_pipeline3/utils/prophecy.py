@@ -23,4 +23,4 @@ def task_wrapper(task_id):
 
     return decorator
 
-pipeline_package_name = {"pipelines/pipeline1" : "pipeline1", "pipelines/Pipeline2" : "Pipeline2"}
+pipeline_package_name = {"pipelines/Pipeline2" : "Pipeline2", "pipelines/pipeline1" : "pipeline1"}

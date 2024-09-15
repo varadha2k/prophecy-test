@@ -18,7 +18,6 @@ from varadharajan_gmail_com_team_bh_test_pipeline3.tasks import (
     SFTPSensor_1,
     SFTPToS3_1,
     SFTPToSnowflake_1,
-    Script_1,
     Slack_1
 )
 PROPHECY_RELEASE_TAG = "__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__"
@@ -31,21 +30,22 @@ with DAG(
     catchup = False, 
     max_active_runs = 1
 ) as dag:
+    SFTPSensor_1_op = SFTPSensor_1()
     EMRPipeline_1_op = EMRPipeline_1()
     HTTPSensor1_op = HTTPSensor1()
     S3FileSensor2_op = S3FileSensor2()
-    Script_1_op = Script_1()
-    SFTPSensor_1_op = SFTPSensor_1()
     EMRPipelineSensor_1_op = EMRPipelineSensor_1()
     EMRClusterSensor_1_op = EMRClusterSensor_1()
+    SFTPToS3_1_op = SFTPToS3_1()
+    SFTPToSnowflake_1_op = SFTPToSnowflake_1()
     Email_1_op = Email_1()
     Slack_1_op = Slack_1()
-    SFTPToS3_1_op = SFTPToS3_1()
     EMRCreateCluster_1_op = EMRCreateCluster_1()
-    SFTPToSnowflake_1_op = SFTPToSnowflake_1()
     SFTPToS3_1_op >> SFTPToSnowflake_1_op
     EMRPipelineSensor_1_op >> EMRClusterSensor_1_op
     EMRPipeline_1_op >> EMRCreateCluster_1_op
+    SFTPSensor_1_op >> [EMRPipeline_1_op, SFTPToS3_1_op]
     S3FileSensor2_op >> EMRPipelineSensor_1_op
+    SFTPToSnowflake_1_op >> Email_1_op
     HTTPSensor1_op >> S3FileSensor2_op
     Email_1_op >> Slack_1_op

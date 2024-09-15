@@ -43,8 +43,8 @@
       "metadata" : {
         "label" : "EMRPipeline_1",
         "slug" : "EMRPipeline_1",
-        "x" : 100,
-        "y" : -320
+        "x" : -20,
+        "y" : -400
       },
       "ports" : {
         "inputs" : [ {
@@ -109,8 +109,8 @@
       "metadata" : {
         "label" : "S3FileSensor2",
         "slug" : "S3FileSensor2",
-        "x" : -740,
-        "y" : -300
+        "x" : -860,
+        "y" : -380
       },
       "ports" : {
         "inputs" : [ {
@@ -136,42 +136,14 @@
       "connections" : [ ],
       "processes" : { }
     },
-    "tQIlIz5_bYdsui7D1GbcR$$GJV3Z_1SvYaPHQ6mK8QfS" : {
-      "id" : "tQIlIz5_bYdsui7D1GbcR$$GJV3Z_1SvYaPHQ6mK8QfS",
-      "component" : "Script",
-      "metadata" : {
-        "label" : "Script_1",
-        "slug" : "Script_1",
-        "x" : -180,
-        "y" : 20
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "CzWUVTe-iNJwNHrQgVGUG$$3jDU0buSHHd4vK3fWu4i8",
-          "slug" : ""
-        } ],
-        "outputs" : [ {
-          "id" : "0S9rtQ0wlJZgT4CW2k1QX$$4X_MtA3uk4zLNeBYqQ56u",
-          "slug" : ""
-        } ]
-      },
-      "settings" : { },
-      "properties" : {
-        "code" : "#!bash",
-        "language" : "bash",
-        "taskId" : null
-      },
-      "connections" : [ ],
-      "processes" : { }
-    },
     "yoMmYY2vaPxkBsqj8MCEc$$FHFcUir9qoDlCrbrEtNMM" : {
       "id" : "yoMmYY2vaPxkBsqj8MCEc$$FHFcUir9qoDlCrbrEtNMM",
       "component" : "SFTPSensor",
       "metadata" : {
         "label" : "SFTPSensor_1",
         "slug" : "SFTPSensor_1",
-        "x" : -360,
-        "y" : -300
+        "x" : -480,
+        "y" : -380
       },
       "ports" : {
         "inputs" : [ {
@@ -202,8 +174,8 @@
       "metadata" : {
         "label" : "EMRPipelineSensor_1",
         "slug" : "EMRPipelineSensor_1",
-        "x" : -620,
-        "y" : -300
+        "x" : -740,
+        "y" : -380
       },
       "ports" : {
         "inputs" : [ {
@@ -234,8 +206,8 @@
       "metadata" : {
         "label" : "EMRClusterSensor_1",
         "slug" : "EMRClusterSensor_1",
-        "x" : -500,
-        "y" : -300
+        "x" : -620,
+        "y" : -380
       },
       "ports" : {
         "inputs" : [ {
@@ -266,8 +238,8 @@
       "metadata" : {
         "label" : "Slack_1",
         "slug" : "Slack_1",
-        "x" : -40,
-        "y" : -140
+        "x" : 120,
+        "y" : -220
       },
       "ports" : {
         "inputs" : [ {
@@ -296,8 +268,8 @@
       "metadata" : {
         "label" : "SFTPToS3_1",
         "slug" : "SFTPToS3_1",
-        "x" : -860,
-        "y" : -120
+        "x" : -480,
+        "y" : -200
       },
       "ports" : {
         "inputs" : [ {
@@ -327,8 +299,8 @@
       "metadata" : {
         "label" : "EMRCreateCluster_1",
         "slug" : "EMRCreateCluster_1",
-        "x" : 240,
-        "y" : -320
+        "x" : 120,
+        "y" : -400
       },
       "ports" : {
         "inputs" : [ {
@@ -357,8 +329,8 @@
       "metadata" : {
         "label" : "HTTPSensor1",
         "slug" : "HTTPSensor1",
-        "x" : -860,
-        "y" : -300
+        "x" : -980,
+        "y" : -380
       },
       "ports" : {
         "inputs" : [ {
@@ -390,8 +362,8 @@
       "metadata" : {
         "label" : "Email_1",
         "slug" : "Email_1",
-        "x" : -180,
-        "y" : -140
+        "x" : -20,
+        "y" : -220
       },
       "ports" : {
         "inputs" : [ {
@@ -422,8 +394,8 @@
       "metadata" : {
         "label" : "SFTPToSnowflake_1",
         "slug" : "SFTPToSnowflake_1",
-        "x" : -700,
-        "y" : -120
+        "x" : -320,
+        "y" : -200
       },
       "ports" : {
         "inputs" : [ {
@@ -488,5 +460,23 @@
     "target" : "6cYIs5uqZ8j9-Cr9iNuzo$$FOI9T_LQSENzytBs-9mzf",
     "sourcePort" : "2SGBs-s1y9tc2wuT_4v7b$$spCS2vZ8R9pEbg-5WjeY1",
     "targetPort" : "ZYdO3e2eGo69b6iSxm6fi$$pm4ZQv72dwM5o2CgG-zeJ"
+  }, {
+    "id" : "lT_8B9uhyku4cJCX7H1VH",
+    "source" : "yoMmYY2vaPxkBsqj8MCEc$$FHFcUir9qoDlCrbrEtNMM",
+    "target" : "jNIYHjXbkZWWM-tGsar__$$BASJqNk-McW8kDJbGEC-f",
+    "sourcePort" : "X1YJvAy2E87v-l12kwTAW$$IEMerSv2nkYaGTgWhIfmO",
+    "targetPort" : "ki_w71gTzxlXzSWI980CW$$Wn-CBBn_uV2w8ktqx3PRs"
+  }, {
+    "id" : "QsvlML-yA_T80y0zV61wL",
+    "source" : "yoMmYY2vaPxkBsqj8MCEc$$FHFcUir9qoDlCrbrEtNMM",
+    "target" : "D9mfTjaIrg_r6u0WjUkAW$$cKtOAP70PKk243XACNUf9",
+    "sourcePort" : "X1YJvAy2E87v-l12kwTAW$$IEMerSv2nkYaGTgWhIfmO",
+    "targetPort" : "CXwtSO5soXk9_0V4RHUSq$$g-A2wNi9nCvWHgCXwHu3-"
+  }, {
+    "id" : "h18UcSIotBMr_YqEb2mUR",
+    "source" : "WQFnQm9PxD07e8DQJi8vU$$NbrLVqSSPUn7CEM0xMiTh",
+    "target" : "JnyOREWd5F6Y-H7fLzQ03$$Eb-mQmPg3EXUlPG_7fTdY",
+    "sourcePort" : "JuagmA_KG7jO5m5aDyv7o$$noCSeFr11sPBG0Nd6SzzY",
+    "targetPort" : "jfw0TK-luDOKguwLeF-7a$$skhs8S1kJWs_zubv8I6bl"
   } ]
 }

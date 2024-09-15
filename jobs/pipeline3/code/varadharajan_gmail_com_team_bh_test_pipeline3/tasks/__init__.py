@@ -8,5 +8,4 @@ from .S3FileSensor2 import *
 from .SFTPSensor_1 import *
 from .SFTPToS3_1 import *
 from .SFTPToSnowflake_1 import *
-from .Script_1 import *
 from .Slack_1 import *
