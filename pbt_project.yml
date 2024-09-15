@@ -135,7 +135,8 @@ jobs:
       onStart: false
       onSuccess: false
       onFailure: false
-    pipelines: []
+    pipelines:
+    - pipelines/pipeline1
     jobClusterMode:
       clusterMode:
         Single: {}
