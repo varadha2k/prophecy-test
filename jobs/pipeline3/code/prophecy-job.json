@@ -63,6 +63,9 @@
         "jobFlowId" : null,
         "awsConnId" : "aws_default",
         "steps" : null,
+        "configurations" : {
+          "instances" : { }
+        },
         "taskId" : null,
         "pipelineId" : null
       },
@@ -227,6 +230,9 @@
         "gcpConnId" : "google_cloud_default",
         "clusterSize" : null,
         "region" : null,
+        "configurations" : {
+          "instances" : { }
+        },
         "taskId" : null,
         "pipelineId" : null
       },
@@ -269,6 +275,9 @@
         "executorCores" : null,
         "principal" : null,
         "driverMemory" : null,
+        "configurations" : {
+          "instances" : { }
+        },
         "numExecutors" : null,
         "taskId" : null,
         "packages" : null,
@@ -302,6 +311,9 @@
         "runJson" : null,
         "databricksConnId" : "",
         "clusterSize" : "",
+        "configurations" : {
+          "instances" : { }
+        },
         "taskId" : null,
         "pipelineId" : null
       },
