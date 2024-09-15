@@ -1,6 +1,6 @@
 name: BH-TEST
 description: ''
-version: v
+version: '4'
 author: varadharajan@gmail.com
 language: python
 buildSystem: ''
