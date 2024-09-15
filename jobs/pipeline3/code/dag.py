@@ -7,17 +7,15 @@ from airflow import DAG
 from airflow.models.param import Param
 from airflow.decorators import task
 sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
-from varadharajan_gmail_com_team_bh_test_pipeline2_job.tasks import Python_1, S3FileSensor_0
+from varadharajan_gmail_com_team_bh_test_pipeline3.tasks import HTTPSensor_0
 PROPHECY_RELEASE_TAG = "__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__"
 
 with DAG(
-    dag_id = "varadharajan_gmail_com_team_BH_TEST_pipeline2_job", 
+    dag_id = "varadharajan_gmail_com_team_BH_TEST_pipeline3", 
     schedule_interval = None, 
     default_args = {"owner" : "Prophecy", "ignore_first_depends_on_past" : True, "do_xcom_push" : True}, 
     start_date = pendulum.today('UTC'), 
     catchup = False, 
     max_active_runs = 1
 ) as dag:
-    S3FileSensor_0_op = S3FileSensor_0()
-    Python_1_op = Python_1()
-    S3FileSensor_0_op >> Python_1_op
+    HTTPSensor_0_op = HTTPSensor_0()

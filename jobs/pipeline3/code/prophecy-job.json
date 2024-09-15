@@ -1,0 +1,872 @@
+{
+  "metainfo" : {
+    "type" : "MWAA",
+    "fabricId" : "17185",
+    "jobId" : "jobs/pipeline3",
+    "name" : "pipeline3",
+    "dagName" : "varadharajan_gmail_com_team_BH_TEST_pipeline3",
+    "schedule" : "None",
+    "enabled" : false,
+    "alerting" : {
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "ignore_first_depends_on_past" : true,
+      "do_xcom_push" : true
+    },
+    "maxActiveRuns" : 1,
+    "catchup" : false,
+    "scheduleTimeZone" : "UTC",
+    "dagParams" : {
+      "instances" : {
+        "default" : { }
+      },
+      "params" : { },
+      "selected" : "default"
+    },
+    "airflowFunctions" : [ ],
+    "dynamicPipelineStatus" : {
+      "databricks" : true,
+      "dataproc" : true,
+      "emr" : true,
+      "onprem" : true
+    }
+  },
+  "processes" : {
+    "jNIYHjXbkZWWM-tGsar__$$BASJqNk-McW8kDJbGEC-f" : {
+      "id" : "jNIYHjXbkZWWM-tGsar__$$BASJqNk-McW8kDJbGEC-f",
+      "component" : "EMRPipeline",
+      "metadata" : {
+        "label" : "EMRPipeline_1",
+        "slug" : "EMRPipeline_1",
+        "x" : 100,
+        "y" : -320
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "ki_w71gTzxlXzSWI980CW$$Wn-CBBn_uV2w8ktqx3PRs",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "1d6paA-_5a1pLIkmeMIPG$$-rJ8-osdlr97FgRPGfiOO",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "actionOnFailure" : "CONTINUE",
+        "clusterSize" : null,
+        "jobFlowId" : null,
+        "awsConnId" : "aws_default",
+        "steps" : null,
+        "taskId" : null,
+        "pipelineId" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    },
+    "-P9BkxQpnspKq16eMipl6$$SHLu_4tQ8lpU8ZyNyOmlq" : {
+      "id" : "-P9BkxQpnspKq16eMipl6$$SHLu_4tQ8lpU8ZyNyOmlq",
+      "component" : "S3FileSensor",
+      "metadata" : {
+        "label" : "S3FileSensor2",
+        "slug" : "S3FileSensor2",
+        "x" : -740,
+        "y" : -300
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "V0LsTAc7pjs-qXasM3Kvs$$jWaz5sH-ohbVfUnCunr0r",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "C7pmpl5yTUdta_LR4Oxr0$$988ZxCgDoZM-fEWnlq3GM",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "awsConnectionId" : "BH-Dev-AWS",
+        "wildCardMatch" : false,
+        "responseCheck" : "response_check",
+        "verifySslCertificates" : true,
+        "s3Paths" : "s3path",
+        "timeout" : 600,
+        "bucketName" : "bucketname",
+        "taskId" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    },
+    "tQIlIz5_bYdsui7D1GbcR$$GJV3Z_1SvYaPHQ6mK8QfS" : {
+      "id" : "tQIlIz5_bYdsui7D1GbcR$$GJV3Z_1SvYaPHQ6mK8QfS",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "Script_1",
+        "slug" : "Script_1",
+        "x" : -180,
+        "y" : 20
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "CzWUVTe-iNJwNHrQgVGUG$$3jDU0buSHHd4vK3fWu4i8",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "0S9rtQ0wlJZgT4CW2k1QX$$4X_MtA3uk4zLNeBYqQ56u",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "code" : "#!bash",
+        "language" : "bash",
+        "taskId" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    },
+    "qfxhpHrtTSe97-kS8Jj9L$$d5B-8aLS0L8Q3rPiNhZAR" : {
+      "id" : "qfxhpHrtTSe97-kS8Jj9L$$d5B-8aLS0L8Q3rPiNhZAR",
+      "component" : "TableauExtract",
+      "metadata" : {
+        "label" : "TableauExtract_1",
+        "slug" : "TableauExtract_1",
+        "x" : -560,
+        "y" : -120
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "NMqwYktOEiIL1hLxAu5yL$$WpM_P3WiF64YkAC9t9oGj",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "Wsnvc9MXSI6YBSe_8dlU0$$McKIJBP4BWT2cOjPCHFxe",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "table_name" : null,
+        "tableau_project_name" : null,
+        "dbt_profile" : null,
+        "catalog_name" : null,
+        "databricks_conn_id" : null,
+        "source_type" : "SNOWFLAKE",
+        "use_catalog" : false,
+        "database_name" : null,
+        "profiles_dir" : null,
+        "tableau_conn_id" : null,
+        "warehouse_conn_id" : null,
+        "tableau_extract_name" : null,
+        "taskId" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    },
+    "yoMmYY2vaPxkBsqj8MCEc$$FHFcUir9qoDlCrbrEtNMM" : {
+      "id" : "yoMmYY2vaPxkBsqj8MCEc$$FHFcUir9qoDlCrbrEtNMM",
+      "component" : "SFTPSensor",
+      "metadata" : {
+        "label" : "SFTPSensor_1",
+        "slug" : "SFTPSensor_1",
+        "x" : -360,
+        "y" : -300
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "WEav5Tim7deMuY7lz2oYc$$u-8mm4FM0eCvwM1-4mP4_",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "X1YJvAy2E87v-l12kwTAW$$IEMerSv2nkYaGTgWhIfmO",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "file_pattern" : null,
+        "pokeInterval" : 60,
+        "sftpConnectionId" : null,
+        "use_file_pattern" : false,
+        "file_path" : "path",
+        "timeout" : 600,
+        "taskId" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    },
+    "laTK0QS5StAievcfxRZhz$$5WXW19nmq8X8EYej9_KbW" : {
+      "id" : "laTK0QS5StAievcfxRZhz$$5WXW19nmq8X8EYej9_KbW",
+      "component" : "DataprocPipeline",
+      "metadata" : {
+        "label" : "DataprocPipeline_1",
+        "slug" : "DataprocPipeline_1",
+        "x" : 380,
+        "y" : -320
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "EmCaSWE90XnHlY-eHYITa$$PSlLuuRbOk66ICAgGY05r",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "ltttQQAQyLXKCq8E2nM3g$$U8Fv8U2R6jIDbO6xx5TEr",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "job" : null,
+        "projectId" : null,
+        "clusterId" : null,
+        "gcpConnId" : "google_cloud_default",
+        "clusterSize" : null,
+        "region" : null,
+        "taskId" : null,
+        "pipelineId" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    },
+    "nw1OH6e2onFSqU4IA-6t_$$9dd4YIZSFZRq9XiYWamaQ" : {
+      "id" : "nw1OH6e2onFSqU4IA-6t_$$9dd4YIZSFZRq9XiYWamaQ",
+      "component" : "OnPremPipeline",
+      "metadata" : {
+        "label" : "OnPremPipeline_1",
+        "slug" : "OnPremPipeline_1",
+        "x" : -40,
+        "y" : -320
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "OAVeSNjCwUwwkH88xM1eI$$a_by2wf-kXXIphFjEkOv7",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "-c0iBQhQEuqaahj2dXFDa$$TZ6HZdnWoU5mq3m4NWVMe",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "jobName" : null,
+        "keytab" : null,
+        "application" : null,
+        "jars" : null,
+        "executorMemory" : null,
+        "deployMode" : "cluster",
+        "proxyUser" : null,
+        "actionOnFailure" : "CONTINUE",
+        "files" : null,
+        "conf" : null,
+        "pyFiles" : null,
+        "clusterSize" : null,
+        "executorCores" : null,
+        "principal" : null,
+        "driverMemory" : null,
+        "numExecutors" : null,
+        "taskId" : null,
+        "packages" : null,
+        "javaClass" : null,
+        "pipelineId" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    },
+    "k2cpJczsrgRTKhhMFJoBn$$0pGIHwDyIXt2zSUdBo9OF" : {
+      "id" : "k2cpJczsrgRTKhhMFJoBn$$0pGIHwDyIXt2zSUdBo9OF",
+      "component" : "DatabricksPipeline",
+      "metadata" : {
+        "label" : "DatabricksPipeline_1",
+        "slug" : "DatabricksPipeline_1",
+        "x" : -180,
+        "y" : -320
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "4TWJ_i9Sh98WhWAP0Zk9v$$uKaYd1Lsre-V6Sz0XbIjr",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "T_WaetE-SmNEGgnk3HoYU$$xMkxct170L2KCPjz8COqx",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "runJson" : null,
+        "databricksConnId" : "",
+        "clusterSize" : "",
+        "taskId" : null,
+        "pipelineId" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    },
+    "AXgzrrZW2zxdYe69qiZKT$$oOESb8tFfAQb8dLuKHhdV" : {
+      "id" : "AXgzrrZW2zxdYe69qiZKT$$oOESb8tFfAQb8dLuKHhdV",
+      "component" : "Branch",
+      "metadata" : {
+        "label" : "Branch_1",
+        "slug" : "Branch_1",
+        "x" : -40,
+        "y" : 20
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "-sv_1IBArkERT45GEXQ0o$$h9P_lTUEVm0_ECdDwhxMS",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "ytvUAlpFyrpQi9BisC7Ik$$UI7AF-7aIXaiDG6xdR6dq",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "callback" : null,
+        "taskId" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    },
+    "V_Zid0TwYnjVikO_vW6CD$$ZKnx6pzUcJPAKApNlMlfN" : {
+      "id" : "V_Zid0TwYnjVikO_vW6CD$$ZKnx6pzUcJPAKApNlMlfN",
+      "component" : "EMRPipelineSensor",
+      "metadata" : {
+        "label" : "EMRPipelineSensor_1",
+        "slug" : "EMRPipelineSensor_1",
+        "x" : -620,
+        "y" : -300
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Hjfg7-L4hEp_9ONKYv0-Y$$skETKgjwjr0kKyj9eS7CO",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "SD4r1fsy79wsJRNntOpco$$SKWE7liJUkUlZ6W8Rvz-7",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "fabricId" : "16995",
+        "maxAttempts" : 60,
+        "jobFlowId" : null,
+        "awsConnId" : "aws_default",
+        "stepId" : "{step1}",
+        "timeout" : 600,
+        "taskId" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    },
+    "qgnA9NRn5Mw4IcZg6DRGj$$0XVdsadSxbPOQhChvdsuN" : {
+      "id" : "qgnA9NRn5Mw4IcZg6DRGj$$0XVdsadSxbPOQhChvdsuN",
+      "component" : "EMRClusterSensor",
+      "metadata" : {
+        "label" : "EMRClusterSensor_1",
+        "slug" : "EMRClusterSensor_1",
+        "x" : -500,
+        "y" : -300
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "YVXlAoAasTYkEvZIRZWd6$$OtCc85gmHzoLNQdS0NOhp",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "SYOQSGRUaPX1KRBEtKROG$$8z-8tW7abwU3kepn8IKGx",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "failedStates" : [ "STARTING" ],
+        "targetStates" : [ ],
+        "maxAttempts" : 60,
+        "jobFlowId" : "cluster2",
+        "awsConnId" : "aws_default",
+        "timeout" : 600,
+        "taskId" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    },
+    "727Uhf3_DYOe2TaxRVIpp$$1W8_l-o0FHwzgtatCYmBs" : {
+      "id" : "727Uhf3_DYOe2TaxRVIpp$$1W8_l-o0FHwzgtatCYmBs",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "Model_1",
+        "slug" : "Model_1",
+        "x" : 680,
+        "y" : -320
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "YGgxlIbI576qAvpoj_XwM$$cLYRt3rkl2rzXrt9ak5fW",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "52yGwKPWUaSA0TguQOF0a$$TAxybSzM0Pq1-22-KJDnd",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "entityId" : null,
+        "cacheSelectedOnly" : null,
+        "gitSubPath" : null,
+        "runModelWithParents" : false,
+        "defer" : null,
+        "noDefer" : null,
+        "runSeed" : true,
+        "gitEntity" : "branch",
+        "noPartialParse" : null,
+        "model" : null,
+        "warnErrorOptions" : null,
+        "gitTokenSecret" : null,
+        "state" : null,
+        "useExperimentalParser" : null,
+        "currentProjectSnapshots" : null,
+        "gitSshUrl" : null,
+        "indirectSelection" : null,
+        "partialParse" : null,
+        "runRun" : null,
+        "vars" : null,
+        "isAdhocRunFromSameProject" : null,
+        "noPrint" : null,
+        "quiet" : null,
+        "projectId" : null,
+        "runMode" : "project",
+        "runOnlyModel" : false,
+        "favorState" : null,
+        "failFast" : null,
+        "noStaticParser" : null,
+        "loadingModels" : false,
+        "runTest" : true,
+        "select" : null,
+        "recordTimingInfo" : null,
+        "fullRefresh" : null,
+        "entityName" : null,
+        "noCacheSelectedOnly" : null,
+        "noFavorState" : null,
+        "snapshot" : null,
+        "isProphecyManaged" : false,
+        "profile" : null,
+        "noVersionCheck" : null,
+        "noWriteJson" : null,
+        "printerWidth" : null,
+        "sqlFabricId" : null,
+        "gitEntityValue" : null,
+        "logFormat" : null,
+        "runModelWithChildren" : false,
+        "dbtProfileSecret" : null,
+        "target" : null,
+        "exclude" : null,
+        "runDeps" : null,
+        "loadingSnapshots" : false,
+        "noAnonymousUsageStats" : null,
+        "selector" : null,
+        "targetPath" : null,
+        "threads" : null,
+        "warnError" : null,
+        "currentProjectModels" : null,
+        "profilesDir" : null,
+        "taskId" : null,
+        "logPath" : null,
+        "storeFailures" : null,
+        "entityKind" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    },
+    "PAIV4gVe41F0bUz_rw7vi$$zZ3LrwH25uU9-rRE3Q_Py" : {
+      "id" : "PAIV4gVe41F0bUz_rw7vi$$zZ3LrwH25uU9-rRE3Q_Py",
+      "component" : "TriggerDag",
+      "metadata" : {
+        "label" : "TriggerDag_1",
+        "slug" : "TriggerDag_1",
+        "x" : 100,
+        "y" : -140
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "YUi3wuktn8wJP7SsKNIgU$$rAiEp27Uv3avH1pZki_gY",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "EesCbUNPGncIz-Jj1Nkxs$$uajpMSzkvgXJhz3Hlyy4I",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "pokeInterval" : null,
+        "resetDagRun" : false,
+        "executionDate" : null,
+        "dagId" : null,
+        "selectionType" : "job",
+        "conf" : null,
+        "jobId" : null,
+        "waitForCompletion" : false,
+        "runId" : null,
+        "taskId" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    },
+    "A8vtM4jrZ-DNABjSs_8sz$$aj4AbQlLi5sD9RzWVXFes" : {
+      "id" : "A8vtM4jrZ-DNABjSs_8sz$$aj4AbQlLi5sD9RzWVXFes",
+      "component" : "Python",
+      "metadata" : {
+        "label" : "Python_1",
+        "slug" : "Python_1",
+        "x" : 100,
+        "y" : 20
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "R70g7Q2U78sG0A4E4jtqa$$viIKX4tuY4wZCaZBcwqWC",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "sE6RqacUsMFO1ZwTkN4ia$$XNWBHNPs3i0j3uUmN2z4q",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "templatesExts" : null,
+        "code" : "import pandas as pd ",
+        "valueInLogs" : true,
+        "opArgs" : null,
+        "templatesDict" : null,
+        "taskId" : null,
+        "opKwargs" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    },
+    "6cYIs5uqZ8j9-Cr9iNuzo$$FOI9T_LQSENzytBs-9mzf" : {
+      "id" : "6cYIs5uqZ8j9-Cr9iNuzo$$FOI9T_LQSENzytBs-9mzf",
+      "component" : "Slack",
+      "metadata" : {
+        "label" : "Slack_1",
+        "slug" : "Slack_1",
+        "x" : -40,
+        "y" : -140
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "ZYdO3e2eGo69b6iSxm6fi$$pm4ZQv72dwM5o2CgG-zeJ",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "vgVeyKQ2lvI8Mtw40OjuF$$yJvdh0X-iXYBNOSYb05YY",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "channel" : "",
+        "text" : "",
+        "token" : null,
+        "slackConnectionId" : null,
+        "taskId" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    },
+    "D9mfTjaIrg_r6u0WjUkAW$$cKtOAP70PKk243XACNUf9" : {
+      "id" : "D9mfTjaIrg_r6u0WjUkAW$$cKtOAP70PKk243XACNUf9",
+      "component" : "SFTPToS3",
+      "metadata" : {
+        "label" : "SFTPToS3_1",
+        "slug" : "SFTPToS3_1",
+        "x" : -860,
+        "y" : -120
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "CXwtSO5soXk9_0V4RHUSq$$g-A2wNi9nCvWHgCXwHu3-",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "GrGJSbb6gJQANo9ORxmDa$$evrry83tHD9mlKilhCi9D",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "s3_bucket" : null,
+        "sftp_path" : null,
+        "s3_key" : null,
+        "sftp_conn_id" : null,
+        "aws_conn_id" : null,
+        "taskId" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    },
+    "zo1LdeKcyWS1ITCpwALTN$$sp-05A31Pemt79Lai1IBi" : {
+      "id" : "zo1LdeKcyWS1ITCpwALTN$$sp-05A31Pemt79Lai1IBi",
+      "component" : "EMRCreateCluster",
+      "metadata" : {
+        "label" : "EMRCreateCluster_1",
+        "slug" : "EMRCreateCluster_1",
+        "x" : 240,
+        "y" : -320
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "OqmL4Rb5eSQFjtRks3CZA$$zMDiWx9a34d8hK3bkmP17",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "VEKzO-yhQRPOCyO-dtrjE$$e51IUBJDNP6DwvzaV2BmQ",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "awsConnId" : null,
+        "emrConnId" : null,
+        "jobFlowOverrides" : null,
+        "regionName" : null,
+        "taskId" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    },
+    "E8vrj-rebz_TqXWkPGztw$$ZFhnSp2ymCReKQpWgIftn" : {
+      "id" : "E8vrj-rebz_TqXWkPGztw$$ZFhnSp2ymCReKQpWgIftn",
+      "component" : "HTTPSensor",
+      "metadata" : {
+        "label" : "HTTPSensor1",
+        "slug" : "HTTPSensor1",
+        "x" : -860,
+        "y" : -300
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "6nyRs5F7rr9EX83XhNq4d$$GVS75X4USbXVDuXjnYsGM",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "xT7UW4oGF8AXDqWGQbDKk$$yPcOg4_D69zy0OQCNL4oH",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "pokeInterval" : 60,
+        "httpConnectionId" : null,
+        "responseCheck" : "test",
+        "endpoint" : "endpoint",
+        "requestParams" : "{param1}",
+        "timeout" : 600,
+        "taskId" : null,
+        "requestHeaders" : "{header}"
+      },
+      "connections" : [ ],
+      "processes" : { }
+    },
+    "JnyOREWd5F6Y-H7fLzQ03$$Eb-mQmPg3EXUlPG_7fTdY" : {
+      "id" : "JnyOREWd5F6Y-H7fLzQ03$$Eb-mQmPg3EXUlPG_7fTdY",
+      "component" : "Email",
+      "metadata" : {
+        "label" : "Email_1",
+        "slug" : "Email_1",
+        "x" : -180,
+        "y" : -140
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "jfw0TK-luDOKguwLeF-7a$$skhs8S1kJWs_zubv8I6bl",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "2SGBs-s1y9tc2wuT_4v7b$$spCS2vZ8R9pEbg-5WjeY1",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "emailCC" : null,
+        "subject" : "",
+        "emailBCC" : null,
+        "emailTo" : "",
+        "emailConnectionId" : null,
+        "htmlContent" : "",
+        "taskId" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    },
+    "IkfDtvZIlbg3pgd1lZIdI$$JUFbP2r7jqa1gPjhNIJhj" : {
+      "id" : "IkfDtvZIlbg3pgd1lZIdI$$JUFbP2r7jqa1gPjhNIJhj",
+      "component" : "SnowflakeSQL",
+      "metadata" : {
+        "label" : "SnowflakeSQL_1",
+        "slug" : "SnowflakeSQL_1",
+        "x" : 520,
+        "y" : -320
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "hBPu1me2UkPAGmBLlhfRq$$ixUPlDuFTCQo2mQPJh5l9",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "35BsQnyWc-wz4fUFiG-HR$$bxnM9KA0FKMlEMZnCnECd",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "connId" : "",
+        "warehouseName" : "",
+        "code" : "",
+        "language" : "sql",
+        "schemaName" : "",
+        "databaseName" : "",
+        "taskId" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    },
+    "WQFnQm9PxD07e8DQJi8vU$$NbrLVqSSPUn7CEM0xMiTh" : {
+      "id" : "WQFnQm9PxD07e8DQJi8vU$$NbrLVqSSPUn7CEM0xMiTh",
+      "component" : "SFTPToSnowflake",
+      "metadata" : {
+        "label" : "SFTPToSnowflake_1",
+        "slug" : "SFTPToSnowflake_1",
+        "x" : -700,
+        "y" : -120
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "FNNpvVZg9R3iJhW8TbSrM$$G5e2Ai2_L9mVd7Ya2cGdL",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "JuagmA_KG7jO5m5aDyv7o$$noCSeFr11sPBG0Nd6SzzY",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "sftp_operation" : "put",
+        "snowflake_conn_id" : null,
+        "file_format" : "CSV",
+        "write_mode" : "OVERWRITE",
+        "sftp_conn_id" : null,
+        "sftp_file_path" : null,
+        "csv_field_delimiter" : ",",
+        "snowflake_table" : null,
+        "csv_header_settings" : "DEFAULT",
+        "taskId" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    }
+  },
+  "connections" : [ {
+    "id" : "D6KFZeweIj5ZozWHAMOc2$$3hB3NHODdEaxRvRH3ohfb",
+    "source" : "E8vrj-rebz_TqXWkPGztw$$ZFhnSp2ymCReKQpWgIftn",
+    "target" : "-P9BkxQpnspKq16eMipl6$$SHLu_4tQ8lpU8ZyNyOmlq",
+    "sourcePort" : "xT7UW4oGF8AXDqWGQbDKk$$yPcOg4_D69zy0OQCNL4oH",
+    "targetPort" : "V0LsTAc7pjs-qXasM3Kvs$$jWaz5sH-ohbVfUnCunr0r"
+  }, {
+    "id" : "Y67iJI428crzQk4Ol4362$$p_MI6WWyFx5mas_6OcJtm",
+    "source" : "-P9BkxQpnspKq16eMipl6$$SHLu_4tQ8lpU8ZyNyOmlq",
+    "target" : "V_Zid0TwYnjVikO_vW6CD$$ZKnx6pzUcJPAKApNlMlfN",
+    "sourcePort" : "C7pmpl5yTUdta_LR4Oxr0$$988ZxCgDoZM-fEWnlq3GM",
+    "targetPort" : "Hjfg7-L4hEp_9ONKYv0-Y$$skETKgjwjr0kKyj9eS7CO"
+  }, {
+    "id" : "IRTc-lTSr5EWwPNfNukkK$$yArgz4RWseIavHKGaoaFP",
+    "source" : "V_Zid0TwYnjVikO_vW6CD$$ZKnx6pzUcJPAKApNlMlfN",
+    "target" : "qgnA9NRn5Mw4IcZg6DRGj$$0XVdsadSxbPOQhChvdsuN",
+    "sourcePort" : "SD4r1fsy79wsJRNntOpco$$SKWE7liJUkUlZ6W8Rvz-7",
+    "targetPort" : "YVXlAoAasTYkEvZIRZWd6$$OtCc85gmHzoLNQdS0NOhp"
+  }, {
+    "id" : "m8CrWSdo09mOeWJOpzpJ9$$pG_-14WGbv0cHKS5UJko7",
+    "source" : "D9mfTjaIrg_r6u0WjUkAW$$cKtOAP70PKk243XACNUf9",
+    "target" : "WQFnQm9PxD07e8DQJi8vU$$NbrLVqSSPUn7CEM0xMiTh",
+    "sourcePort" : "GrGJSbb6gJQANo9ORxmDa$$evrry83tHD9mlKilhCi9D",
+    "targetPort" : "FNNpvVZg9R3iJhW8TbSrM$$G5e2Ai2_L9mVd7Ya2cGdL"
+  }, {
+    "id" : "288Zwh-6nZsAsEBWz0UuV$$DVmcqs4UNRNJcViRxlXME",
+    "source" : "WQFnQm9PxD07e8DQJi8vU$$NbrLVqSSPUn7CEM0xMiTh",
+    "target" : "qfxhpHrtTSe97-kS8Jj9L$$d5B-8aLS0L8Q3rPiNhZAR",
+    "sourcePort" : "JuagmA_KG7jO5m5aDyv7o$$noCSeFr11sPBG0Nd6SzzY",
+    "targetPort" : "NMqwYktOEiIL1hLxAu5yL$$WpM_P3WiF64YkAC9t9oGj"
+  }, {
+    "id" : "GK0gRSh-Sy4U0pSya2Aqm$$K5Q2t3Hn2AIaZHE8sFZU0",
+    "source" : "k2cpJczsrgRTKhhMFJoBn$$0pGIHwDyIXt2zSUdBo9OF",
+    "target" : "nw1OH6e2onFSqU4IA-6t_$$9dd4YIZSFZRq9XiYWamaQ",
+    "sourcePort" : "T_WaetE-SmNEGgnk3HoYU$$xMkxct170L2KCPjz8COqx",
+    "targetPort" : "OAVeSNjCwUwwkH88xM1eI$$a_by2wf-kXXIphFjEkOv7"
+  }, {
+    "id" : "TiEk8JFlyMNv0jhTClAg2$$J3TNyF09NKvlYzrYWfChS",
+    "source" : "nw1OH6e2onFSqU4IA-6t_$$9dd4YIZSFZRq9XiYWamaQ",
+    "target" : "jNIYHjXbkZWWM-tGsar__$$BASJqNk-McW8kDJbGEC-f",
+    "sourcePort" : "-c0iBQhQEuqaahj2dXFDa$$TZ6HZdnWoU5mq3m4NWVMe",
+    "targetPort" : "ki_w71gTzxlXzSWI980CW$$Wn-CBBn_uV2w8ktqx3PRs"
+  }, {
+    "id" : "B8ze_lJe1l0adgtisPwph$$cIjMX_DIa2E5gQVsnNZUW",
+    "source" : "jNIYHjXbkZWWM-tGsar__$$BASJqNk-McW8kDJbGEC-f",
+    "target" : "zo1LdeKcyWS1ITCpwALTN$$sp-05A31Pemt79Lai1IBi",
+    "sourcePort" : "1d6paA-_5a1pLIkmeMIPG$$-rJ8-osdlr97FgRPGfiOO",
+    "targetPort" : "OqmL4Rb5eSQFjtRks3CZA$$zMDiWx9a34d8hK3bkmP17"
+  }, {
+    "id" : "IPJ9ldr9X9ImYSBNaEUAN$$RZb1Sth_YN7Y1pxkrRNeL",
+    "source" : "zo1LdeKcyWS1ITCpwALTN$$sp-05A31Pemt79Lai1IBi",
+    "target" : "laTK0QS5StAievcfxRZhz$$5WXW19nmq8X8EYej9_KbW",
+    "sourcePort" : "VEKzO-yhQRPOCyO-dtrjE$$e51IUBJDNP6DwvzaV2BmQ",
+    "targetPort" : "EmCaSWE90XnHlY-eHYITa$$PSlLuuRbOk66ICAgGY05r"
+  }, {
+    "id" : "6Aur1djGVE_9XnnQVyUaE$$fNsav893Yf5ZzmIafbAsn",
+    "source" : "laTK0QS5StAievcfxRZhz$$5WXW19nmq8X8EYej9_KbW",
+    "target" : "IkfDtvZIlbg3pgd1lZIdI$$JUFbP2r7jqa1gPjhNIJhj",
+    "sourcePort" : "ltttQQAQyLXKCq8E2nM3g$$U8Fv8U2R6jIDbO6xx5TEr",
+    "targetPort" : "hBPu1me2UkPAGmBLlhfRq$$ixUPlDuFTCQo2mQPJh5l9"
+  }, {
+    "id" : "9V89APql3lhQIjU8O7q_b$$qHcVd4lZ4FBkBv2vQEV6g",
+    "source" : "IkfDtvZIlbg3pgd1lZIdI$$JUFbP2r7jqa1gPjhNIJhj",
+    "target" : "727Uhf3_DYOe2TaxRVIpp$$1W8_l-o0FHwzgtatCYmBs",
+    "sourcePort" : "35BsQnyWc-wz4fUFiG-HR$$bxnM9KA0FKMlEMZnCnECd",
+    "targetPort" : "YGgxlIbI576qAvpoj_XwM$$cLYRt3rkl2rzXrt9ak5fW"
+  }, {
+    "id" : "9qt6isUi2YQ2fXaRAdx4c$$JUmlMk7pNNixGkjscG6Ch",
+    "source" : "JnyOREWd5F6Y-H7fLzQ03$$Eb-mQmPg3EXUlPG_7fTdY",
+    "target" : "6cYIs5uqZ8j9-Cr9iNuzo$$FOI9T_LQSENzytBs-9mzf",
+    "sourcePort" : "2SGBs-s1y9tc2wuT_4v7b$$spCS2vZ8R9pEbg-5WjeY1",
+    "targetPort" : "ZYdO3e2eGo69b6iSxm6fi$$pm4ZQv72dwM5o2CgG-zeJ"
+  }, {
+    "id" : "CnXuywJIrqsRQCL1omp5N$$As_pU2OsMDcW6_DfFCwOg",
+    "source" : "6cYIs5uqZ8j9-Cr9iNuzo$$FOI9T_LQSENzytBs-9mzf",
+    "target" : "PAIV4gVe41F0bUz_rw7vi$$zZ3LrwH25uU9-rRE3Q_Py",
+    "sourcePort" : "vgVeyKQ2lvI8Mtw40OjuF$$yJvdh0X-iXYBNOSYb05YY",
+    "targetPort" : "YUi3wuktn8wJP7SsKNIgU$$rAiEp27Uv3avH1pZki_gY"
+  }, {
+    "id" : "__6qyDJRJvKr3klF7lN0u$$od7lz0GJhosLkhXXepg_A",
+    "source" : "tQIlIz5_bYdsui7D1GbcR$$GJV3Z_1SvYaPHQ6mK8QfS",
+    "target" : "AXgzrrZW2zxdYe69qiZKT$$oOESb8tFfAQb8dLuKHhdV",
+    "sourcePort" : "0S9rtQ0wlJZgT4CW2k1QX$$4X_MtA3uk4zLNeBYqQ56u",
+    "targetPort" : "-sv_1IBArkERT45GEXQ0o$$h9P_lTUEVm0_ECdDwhxMS"
+  }, {
+    "id" : "yRh9f0liNmOZKm1sA3W6N$$n3ig7_bvsSzTD49aC3ISH",
+    "source" : "AXgzrrZW2zxdYe69qiZKT$$oOESb8tFfAQb8dLuKHhdV",
+    "target" : "A8vtM4jrZ-DNABjSs_8sz$$aj4AbQlLi5sD9RzWVXFes",
+    "sourcePort" : "ytvUAlpFyrpQi9BisC7Ik$$UI7AF-7aIXaiDG6xdR6dq",
+    "targetPort" : "R70g7Q2U78sG0A4E4jtqa$$viIKX4tuY4wZCaZBcwqWC"
+  } ]
+}

@@ -110,14 +110,38 @@ jobs:
       onStart: false
       onSuccess: false
       onFailure: false
-    pipelines:
-    - pipelines/Pipeline2
+    pipelines: []
     jobClusterMode:
       clusterMode:
         Single: {}
       clusterId: null
     enabled: null
     createdAt: '2024-09-11 04:34:53'
+    author: varadharajan@gmail.com
+    models: []
+    sqlProjects: []
+  jobs/pipeline3:
+    name: pipeline3
+    description: pipeline3
+    fabricUID: 17185
+    scheduler:
+      MWAA: {}
+    cloudProvider: null
+    jobSize: null
+    scheduleCron: None
+    timeout: null
+    alerting:
+      emails: ''
+      onStart: false
+      onSuccess: false
+      onFailure: false
+    pipelines: []
+    jobClusterMode:
+      clusterMode:
+        Single: {}
+      clusterId: null
+    enabled: null
+    createdAt: '2024-09-15 06:56:24'
     author: varadharajan@gmail.com
     models: []
     sqlProjects: []
