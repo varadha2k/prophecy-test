@@ -95,3 +95,10 @@ schema:
         information.
       mappings: []
       tags: []
+  - name: 'col2    '
+    type: integer
+    nullable: false
+    metadata:
+      description: ''
+      mappings: []
+      tags: []

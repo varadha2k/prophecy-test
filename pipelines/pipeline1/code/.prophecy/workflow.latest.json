@@ -369,6 +369,15 @@
                 "mappings" : [ ],
                 "tags" : [ ]
               }
+            }, {
+              "name" : "col2    ",
+              "type" : "integer",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
             } ]
           },
           "isStreaming" : false
@@ -608,6 +617,15 @@
               "nullable" : true,
               "metadata" : {
                 "description" : "Placeholder for additional data; currently contains no relevant information.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "col2    ",
+              "type" : "integer",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }

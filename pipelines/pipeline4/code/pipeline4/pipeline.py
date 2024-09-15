@@ -8,7 +8,8 @@ from pipeline4.graph import *
 
 def pipeline(spark: SparkSession) -> None:
     df_testdata_parquet = testdata_parquet(spark)
-    df_add_constant_column = add_constant_column(spark)
+    df_filter_by_age = filter_by_age(spark, df_testdata_parquet)
+    df_add_constant_column = add_constant_column(spark, df_filter_by_age)
     testdata1(spark, df_add_constant_column)
 
 def main():
