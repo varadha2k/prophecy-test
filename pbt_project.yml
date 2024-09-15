@@ -41,6 +41,21 @@ pipelines:
       - datasets/testdata_parquet
     subgraphs: []
     dependencies: {}
+  pipelines/pipeline4:
+    name: pipeline4
+    description: ''
+    author: varadharajan@gmail.com
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2024-09-15 08:33:51'
+    datasets:
+      inputs:
+      - datasets/testdata_parquet
+      outputs:
+      - datasets/testdata1
+    subgraphs: []
+    dependencies: {}
 datasets:
   datasets/testdata1:
     name: testdata1

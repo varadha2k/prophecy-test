@@ -18,7 +18,8 @@ from varadharajan_gmail_com_team_bh_test_pipeline3.tasks import (
     SFTPSensor_1,
     SFTPToS3_1,
     SFTPToSnowflake_1,
-    Slack_1
+    Slack_1,
+    pipeline1
 )
 PROPHECY_RELEASE_TAG = "__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__"
 
@@ -41,6 +42,7 @@ with DAG(
     Email_1_op = Email_1()
     Slack_1_op = Slack_1()
     EMRCreateCluster_1_op = EMRCreateCluster_1()
+    pipeline1_op = pipeline1()
     SFTPToS3_1_op >> SFTPToSnowflake_1_op
     EMRPipelineSensor_1_op >> EMRClusterSensor_1_op
     EMRPipeline_1_op >> EMRCreateCluster_1_op

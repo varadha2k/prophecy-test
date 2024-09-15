@@ -356,6 +356,67 @@
       "connections" : [ ],
       "processes" : { }
     },
+    "CdUckd4S6s7ZTIP_-XDZN$$-fezfhw7nPITAJBDBzqQG" : {
+      "id" : "CdUckd4S6s7ZTIP_-XDZN$$-fezfhw7nPITAJBDBzqQG",
+      "component" : "DatabricksPipeline",
+      "metadata" : {
+        "label" : "pipeline1",
+        "slug" : "pipeline1",
+        "x" : -340,
+        "y" : -380
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "x1hIL1yprZK2Tk-Yc4ubY$$IJc6VTs1mNALnKRiSa52h",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "fhh8ySevTup59YowzNbrW$$5wvsgRN2aWWvnlCNsbrAm",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "runJson" : null,
+        "databricksConnId" : "",
+        "clusterSize" : "",
+        "configurations" : {
+          "schema" : [ {
+            "name" : "test",
+            "optional" : false,
+            "comment" : "10",
+            "kind" : {
+              "type" : "string",
+              "value" : null
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : false
+          }, {
+            "name" : "test2",
+            "optional" : false,
+            "comment" : "20",
+            "kind" : {
+              "type" : "string",
+              "value" : null
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : false
+          } ],
+          "instances" : {
+            "BH-TEST" : [ "default" ]
+          },
+          "overrides" : { },
+          "selectedInstance" : "default"
+        },
+        "taskId" : null,
+        "pipelineId" : {
+          "type" : "literal",
+          "value" : "pipelines/pipeline1"
+        }
+      },
+      "connections" : [ ],
+      "processes" : { }
+    },
     "JnyOREWd5F6Y-H7fLzQ03$$Eb-mQmPg3EXUlPG_7fTdY" : {
       "id" : "JnyOREWd5F6Y-H7fLzQ03$$Eb-mQmPg3EXUlPG_7fTdY",
       "component" : "Email",

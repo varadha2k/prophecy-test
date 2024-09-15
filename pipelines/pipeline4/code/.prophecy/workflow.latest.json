@@ -1,0 +1,336 @@
+{
+  "metainfo" : {
+    "migrationVersions" : {
+      "gemBuilderVersion" : "v1"
+    },
+    "functions" : { },
+    "codeGenConfiguration" : {
+      "editableConfig" : true,
+      "plibVersion" : {
+        "mavenVersion" : "8.0.31",
+        "pyPiVersion" : "1.9.9"
+      }
+    },
+    "id" : "1",
+    "uri" : "pipelines/pipeline4",
+    "sourceSuggestions" : [ ],
+    "pipelineSettingsInfo" : {
+      "applicationName" : "pipeline4",
+      "hasApplication" : true,
+      "isFunctionsPackageDirDefined" : true
+    },
+    "language" : "python",
+    "fabricId" : "13854",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ],
+      "functionPackageName" : "varadharajangmailcomteam.bhtest.functions",
+      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions" ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "12654",
+      "projectName" : "ProphecySparkBasicsPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12655",
+      "projectName" : "ProphecyWarehousePython",
+      "externalDependencies" : [ ]
+    } ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "pipeline4",
+    "configurationVersion" : "v2"
+  },
+  "connections" : [ {
+    "id" : "43QzdPSf-jN6VMFkVoeGq",
+    "source" : "-uLBgMK2cq5b-W_mLDEzg$$_zWxJBKG77MSBPEYwrafg",
+    "sourcePort" : "DmRhX6qeyp23ZMmDqdo2C$$HNM_AJDxLyiofEtKkbk8R",
+    "target" : "raB8UoxWTsFGuswW4v2zM$$XsCFy9Dc_CfBE2ulbXww4",
+    "targetPort" : "FzNiTBJBZNtjLGF0Q5s9i$$MaRJB7dT4EnWCMJ9C83rZ"
+  }, {
+    "id" : "oZ8Mh4ZTXCbw1HlTing_g",
+    "source" : "raB8UoxWTsFGuswW4v2zM$$XsCFy9Dc_CfBE2ulbXww4",
+    "sourcePort" : "om4Kq3_ebk1Ms8iNoPgSP$$rYzdcytERzldXbolTHSzJ",
+    "target" : "QFSgbcUWr3xI8gWhX5avS$$CaWPF8BtXGGTwxa9mxYb9",
+    "targetPort" : "0GQgyPz6rgrR4S-OCBIln$$waGNm6BddvqriETmdfZNy"
+  }, {
+    "id" : "42OWldwUrQrKynytOmw5K",
+    "source" : "QFSgbcUWr3xI8gWhX5avS$$CaWPF8BtXGGTwxa9mxYb9",
+    "sourcePort" : "_Eu970aFgs8pjiPCCGp7X$$ZhEJZnrCU3eK2Y2rmTDLF",
+    "target" : "0bNAr0XpeXmy5FbDiqOwK$$4xStGFGmA36c0mocmdG3L",
+    "targetPort" : "vNlCQaN8N8RrNN7sE6QFw$$AhE-nULEwW2I0whR9kd_K"
+  } ],
+  "processes" : {
+    "-uLBgMK2cq5b-W_mLDEzg$$_zWxJBKG77MSBPEYwrafg" : {
+      "id" : "-uLBgMK2cq5b-W_mLDEzg$$_zWxJBKG77MSBPEYwrafg",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "testdata_parquet",
+        "slug" : "testdata_parquet",
+        "x" : -780,
+        "y" : -260,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "DmRhX6qeyp23ZMmDqdo2C$$HNM_AJDxLyiofEtKkbk8R",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/testdata_parquet"
+      }
+    },
+    "raB8UoxWTsFGuswW4v2zM$$XsCFy9Dc_CfBE2ulbXww4" : {
+      "id" : "raB8UoxWTsFGuswW4v2zM$$XsCFy9Dc_CfBE2ulbXww4",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "filter_by_age",
+        "slug" : "filter_by_age",
+        "x" : -480,
+        "y" : -280,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Filters out individuals aged 20 and below for targeted analysis or marketing strategies.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "FzNiTBJBZNtjLGF0Q5s9i$$MaRJB7dT4EnWCMJ9C83rZ",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "om4Kq3_ebk1Ms8iNoPgSP$$rYzdcytERzldXbolTHSzJ",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "condition" : {
+          "format" : "sql",
+          "expression" : "age > 20"
+        }
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.28&projectSubscriptionProjectId=12654&path=gems/Filter",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "QFSgbcUWr3xI8gWhX5avS$$CaWPF8BtXGGTwxa9mxYb9" : {
+      "id" : "QFSgbcUWr3xI8gWhX5avS$$CaWPF8BtXGGTwxa9mxYb9",
+      "component" : "SchemaTransform",
+      "metadata" : {
+        "label" : "add_constant_column",
+        "slug" : "add_constant_column",
+        "x" : -160,
+        "y" : -280,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Adds a constant value column to the dataset, which can be useful for calculations or comparisons.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "0GQgyPz6rgrR4S-OCBIln$$waGNm6BddvqriETmdfZNy",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "_Eu970aFgs8pjiPCCGp7X$$ZhEJZnrCU3eK2Y2rmTDLF",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "importLanguage" : "sql",
+        "importString" : "",
+        "transformations" : [ {
+          "AddRule" : {
+            "expression" : {
+              "expression" : "",
+              "format" : "python"
+            },
+            "param_errors" : [ ]
+          },
+          "MissingColumn" : {
+            "sourceColumn" : "",
+            "defaultValue" : {
+              "expression" : "",
+              "format" : "python"
+            }
+          },
+          "DropColumn" : {
+            "sourceColumn" : ""
+          },
+          "kind" : "AddReplaceColumn",
+          "RenameColumn" : {
+            "sourceColumn" : "",
+            "targetColumn" : ""
+          },
+          "AddReplaceColumn" : {
+            "sourceColumn" : "col2    ",
+            "expression" : {
+              "format" : "sql",
+              "expression" : "10"
+            }
+          }
+        } ],
+        "activeTab" : "transformations",
+        "columnsSelector" : [ ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.28&projectSubscriptionProjectId=12654&path=gems/SchemaTransform",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "0bNAr0XpeXmy5FbDiqOwK$$4xStGFGmA36c0mocmdG3L" : {
+      "id" : "0bNAr0XpeXmy5FbDiqOwK$$4xStGFGmA36c0mocmdG3L",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "testdata1",
+        "slug" : "testdata1",
+        "x" : 180,
+        "y" : -240,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Exports student data to a CSV file for further analysis or reporting.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "vNlCQaN8N8RrNN7sE6QFw$$AhE-nULEwW2I0whR9kd_K",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/testdata1"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  },
+  "diagnostics" : [ {
+    "property" : "$.workflow.processes.-uLBgMK2cq5b-W_mLDEzg$$_zWxJBKG77MSBPEYwrafg.properties.format",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "format: parquet not supported",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.raB8UoxWTsFGuswW4v2zM$$XsCFy9Dc_CfBE2ulbXww4",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.QFSgbcUWr3xI8gWhX5avS$$CaWPF8BtXGGTwxa9mxYb9",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.0bNAr0XpeXmy5FbDiqOwK$$4xStGFGmA36c0mocmdG3L",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  } ]
+}
